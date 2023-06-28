@@ -1,5 +1,3 @@
-import time
-
 
 class Login:
     def __init__(self, driver):
@@ -9,13 +7,10 @@ class Login:
         self.Login_button_xpath = "//span[.='Login']"
 
     def enter_username(self, username):
-        self.driver.find_element("name", self.username_textbox_name).sendkeys(username)
+        self.driver.find_element("name", self.username_textbox_name).sendKeys(username)
 
     def enter_password(self, password):
-        self.driver.find_element("name", self.password_textbox_name).sendkeys(password)
+        self.driver.find_element("name", self.password_textbox_name).sendKeys(password)
 
     def click_on_Login_button(self):
         self.driver.find_element("xpath", self.Login_button_xpath).click()
-        time.sleep(2)
-
-
